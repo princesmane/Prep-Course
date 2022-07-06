@@ -77,7 +77,7 @@ function sonIguales(x, y) {
   return true }
   return false
 }
-
+// tb puedo hacer solo return x===y
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
@@ -89,7 +89,7 @@ function tienenMismaLongitud(str1, str2) {
       return false}
 
 }
-
+// tb puedo hacer return str1.length === str2.length
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
@@ -114,7 +114,8 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  return x % y
+  
+  return x % y  // tb puede ser asi: var resto= x % y;  return resto
 
 }
 
@@ -126,6 +127,7 @@ function esPar(num) {
     return true
   } else { return false
   }
+
 }
 
 function esImpar(num) {
@@ -136,6 +138,14 @@ function esImpar(num) {
     return true
   } else { 
     return false }
+
+ 
+  //  if ( num % 2 !=== 0 ) {
+   //   return true
+    //} else { 
+      //return false }
+
+
 }
 
 function elevarAlCuadrado(num) {
@@ -144,6 +154,10 @@ function elevarAlCuadrado(num) {
   // Tu código:
   var cuadrado = num * num
   return cuadrado
+
+
+  // const cuadrado= num **2;
+  // return cuadrado
 }
 
 function elevarAlCubo(num) {
@@ -151,6 +165,9 @@ function elevarAlCubo(num) {
   // Tu código:
   var cubo = num * num * num
   return cubo
+
+//const cubo = num**3
+//return cubo
 }
 // tambien se puede hacer con el Math.pow asi
 // return Math.pow (num, 3)
@@ -162,13 +179,18 @@ function elevar(num, exponent) {
   // Tu código:
   return Math.pow (num, exponent)
   
-  // tb podria ser    return Math.pow ( num, exponent)
+  // tb podria ser    const elevar= num**exponent
+  //                  return elevar
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
   return Math.round (num, num + 1)
+
+// let redondear = Math.round(num)
+// return redondear
+
 }
 // tb pueede ser: return Match.pow (num)
 
@@ -176,6 +198,8 @@ function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
   return Math.ceil (num, num + 1)
+
+  // var redondear = Math.ceil (num); return redondear
 }
 // tb puede ser: return Math.ceil (num)
 
@@ -184,7 +208,8 @@ function numeroRandom() {
   //Pista: investigá qué hace el método Math.random()
   
   return Math.random ()
-
+ // un numero randon es un numero generado al azar
+ 
 }
 
 function esPositivo(numero) {
@@ -209,7 +234,7 @@ function agregarSimboloExclamacion(str) {
   // Tu código:
   return str + "!";
 
-  agregarSimboloExclamacion ('hello world')
+ // agregarSimboloExclamacion ('hello world')
 } 
  
 
@@ -219,7 +244,7 @@ function combinarNombres(nombre, apellido) {
   // Tu código:
   return nombre + ' ' + apellido;
 }
-combinarNombres ('soy', 'henry')
+// combinarNombres ('soy', 'henry')
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
@@ -257,7 +282,8 @@ function deEuroAdolar(euro){
   //Escribe tu código aquí
   return euro * 1.20
 }
-
+// let dolar = 1.20
+// return euro * dolar
 
 function esVocal(Letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
@@ -272,7 +298,11 @@ function esVocal(Letra){
     else return 'Dato incorrecto'
 }
 
-
+// if ( letra.length > 1){
+//  return "Dato incorrecto";
+//   }else if (letra === 'a' || letra==='e' || letrea==='i' || letra==='o' || letra==='u'){
+//     return “Es vocal”;
+// }else {return "Dato incorrecto"}
 
 // No modificar nada debajo de esta línea
 // --------------------------------

@@ -70,20 +70,38 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  return palabras.join (" ")
 }
-
+// para resolverlo con un for
+// var result= ''
+// for (var i=0; i < palabras.length; i ++) {
+  // result = result + palabras [i] + ' '
+//  }
+// resturn result".trim()  el trim lo que hace es borrar los espacios x ej de " HELLO WROLD "
+// a "HELLO WORLD"
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-}
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === elemento) {
+  return true 
+    }  
+    }
+    return false
+  }
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+var suma=0
+for (var i = 0; i < numeros.length; i++) {
+  suma = suma + numeros[i];
+  }
+return suma;
 }
 
 
@@ -91,6 +109,14 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+return agregarNumeros (resultadosTest) / resultadosTest.length
+
+// tambien lo podemos hacer asi:
+// var suma = 0
+// for (var i = 0; i < resultadosTest.length; i++) {
+//   suma = suma + resultadosTest[i];
+//  }
+// return suma / resultadosTest.lengt
 }
 
 
@@ -98,19 +124,40 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+
+// ej si tenemos [5,10,20]
+var numeroMayor = numeros[0]  // tomaria que numeroMayor=5 xq esta en la posicion 0
+for (var i = 1; i < numeros.length; i++) {
+  if (numeros[i] > numeroMayor) {
+  numeroMayor = numeros[i];  
+}
+} 
+return numeroMayor
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+var producto = 1
+ if (arguments.length < 1){
+  return 0
+ }
+for (var i = 0; i < arguments.length; i++) {
+  producto = producto * arguments[i];
+  }
+  return producto
 }
+
+
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+
+  
 
 }
 
