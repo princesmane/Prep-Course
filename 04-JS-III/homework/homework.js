@@ -5,17 +5,20 @@ function devolverPrimerElemento(array) {
   // Tu código:
  return array.shift()
 }
+// tambien con return array [0]
 // para acceder al primer elemento de 1 array existe un metodo que se llama shift
   // que devuelve el primer elemento del array
   //let array = [1,2,5,6]
 //console.log(array.shift())
+
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
   return array.pop()
 }
-
+// var ultimo= array.length-1
+// return array[ultimo];
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
@@ -29,16 +32,16 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  let arr =[]
+  let increment =[]
   for (let i = 0; i < array.length; i++) {
-    arr.push(array[i]+1);
+    increment.push(array[i]+1);
     
-  } return arr;
+  } return increment;
   
- // let arr = array.map (function (elemento) {
+ // let increment = array.map (function (elemento) {
   //  return elemento + 1;
  //})
- //   return arr
+ //   return incremment
 }
 
 
@@ -72,12 +75,15 @@ function dePalabrasAFrase(palabras) {
   // Tu código:
   return palabras.join (" ")
 }
+// tb let dePalabrasAFrase=palabras.join (" ");
+// return dePalabrasAFrase
+
 // para resolverlo con un for
 // var result= ''
 // for (var i=0; i < palabras.length; i ++) {
   // result = result + palabras [i] + ' '
 //  }
-// resturn result".trim()  el trim lo que hace es borrar los espacios x ej de " HELLO WROLD "
+// return result.trim()  el trim lo que hace es borrar los espacios x ej de " HELLO WROLD "
 // a "HELLO WORLD"
 
 function arrayContiene(array, elemento) {
@@ -117,6 +123,14 @@ return agregarNumeros (resultadosTest) / resultadosTest.length
 //   suma = suma + resultadosTest[i];
 //  }
 // return suma / resultadosTest.lengt
+
+// var promedio =0, var suma=0;
+// for (let i = 0; i < resultadosTest.length; i++) {
+  // suma= suma + resultadosTest[i]
+  // promedio= Math.ceil(suma / resultadosTest.length);
+  //}
+  // return promedio
+  
 }
 
 
@@ -134,16 +148,19 @@ for (var i = 1; i < numeros.length; i++) {
 } 
 return numeroMayor
 }
-
+// var valorComparacion=0
+// for (i=0; i< numeros.length; i++){
+  // if (numeros[i] > valorComparacion) valorComparacion =numeros[i]
+//} retrurn valorComparacion
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-var producto = 1
- if (arguments.length < 1){
-  return 0
- }
+
+ if (arguments.length < 1){return 0 }
+
+ var producto = 1
 for (var i = 0; i < arguments.length; i++) {
   producto = producto * arguments[i];
   }
@@ -156,18 +173,35 @@ for (var i = 0; i < arguments.length; i++) {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+var acumulador=0
+for (let i = 0; i < arreglo.length; i++) {
+  if (arreglo[i] > 18) acumulador = acumulador +1;
+   
+} return acumulador
   
-
 }
 
 
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
-  //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
+  //Realiza una función que dado el número del día de la semana, retorne: 'Es fin de semana'
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
   
+  switch (numeroDeDia) {
+    case 1: 
+    case 7:
+      return "Es fin de semana"
+    break;
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+  return 'Es dia Laboral'
+    default:
+      break;
+  }
 } 
 
 
@@ -176,6 +210,9 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   
+  var string = n.toString
+  return string[0]==="9"
+
 }
 
 

@@ -6,10 +6,18 @@ function obtenerMayor(x, y) {
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
   if (x > y) return x
-   else return y
+  else return y
   if ( x === y)
   return x || y
 
+
+  // if (x==y) {
+   //  return x
+   // } else if(x>y) {
+    //return x;
+   //} else {
+   // return y 
+   //}
 }
 
 function mayoriaDeEdad(edad) {
@@ -78,16 +86,11 @@ function colors(color) {
  }
 // tambien se puede hacer con un switch asi:
 // sitch (color) {
-  // case "blue":
- // return "This is blue"
-// case "red":
- //return "This is red"
-//case "green":
- //return "This is green"
-// case "orange":
- // return "This is orange"
-// default:
- // return "Color not found"
+  // case "blue": return "This is blue"
+// case "red": return "This is red"
+//case "green": return "This is green"
+// case "orange":  return "This is orange"
+// default:  return "Color not found"
 // }
 }
 
@@ -124,6 +127,13 @@ function esEntero(numero) {
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
 return numero % 1===0
+
+// if (numero !== Math.floor(numero)){
+  //return false
+  // else {
+   // return true
+  //}
+//}
 }
 
 function fizzBuzz(numero) {
@@ -138,7 +148,7 @@ else if (numero%3===0){
   return "fizz"
 } 
 else if (numero %5===0){
-  return "buzz"
+  return "buzz" 
 } 
 else {
   return numero
@@ -160,9 +170,7 @@ function operadoresLogicos(num1, num2, num3) {
     return "Número 1 es mayor y positivo"
   } else if (num3>num2 && num3>num1){
     return num3 + 1
-  } else if (num1===0 || num2===0 || num3===0){
-    return "Error"
-  }
+  } 
   else return false
 } // en estos casos lo mejor siempre es empezar por los errores
 
@@ -190,7 +198,7 @@ function esVerdadero(valor) {
   //Escribe tu código aquí
 if (valor === true)
   return 'Soy verdadero'
-   else if (valor === false)
+  else if (valor === false)
   return 'Soy falso'
 }
 
@@ -204,6 +212,20 @@ for (let i=0; i<11; i++){
 } return tablaDel6
 } 
 // estos son arrays - tambien se puede usar var. var o let
+
+// let tabladelseis = []
+// for (let i=0; 1<=10; i++) {
+  //let tabla= 6*i;
+  // tabladelseis.push(tabla);
+//} return tabladelseis
+//}
+// oooooooootra forma
+// var nuevoArray=[]
+// for (var=i; i<= 60; i++){
+  // if (i%6 === 0){
+    //nuevoArray.push(i);
+  //}
+//} return nuevo Array
 
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
@@ -227,7 +249,13 @@ var i=0
     return result
   }
 }
-
+// let i=0;
+// let auxiliar = numero + 5;
+// do {
+// numero = auxiliar;
+// i ++
+//} while (i<8)
+// retrurn numero;
 
 // No modificar nada debajo de esta línea
 // --------------------------------

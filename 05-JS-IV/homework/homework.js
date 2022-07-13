@@ -23,6 +23,10 @@ function agregarPropiedad (objeto, property) {
   // Tu código:
      objeto[property] = null;
       return objeto;
+
+      // var propiedad = property;
+      // objeto [propiedad] = null
+      // return objeto;
 }
 
 function invocarMetodo (objeto, metodo) {
@@ -31,6 +35,9 @@ function invocarMetodo (objeto, metodo) {
   // Nada necesita ser devuelto ("returned")
   // Tu código:
   objeto [metodo]() // objeto ['mundo']()
+
+  // var cadena = metodo;
+  // objeto[cadena](); como  no necesitamos retornar queda ahi
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -39,8 +46,12 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // Tu código:
   return objetoMisterioso.numeroMisterioso * 5;
   
+
+  // var devolver = objetoMisterioso.numeroMisterioso *5
+  // return devolver
+
 }
-// si declarfamos un objet numero isterioso y despues declaramos eso retornarfa un numero
+// si declarfamos un objet numeroMisterioso y despues declaramos eso retornarfa un numero
 function eliminarPropiedad (objeto, unaPropiedad) {
   // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad
   // tip: tenes que usar bracket notation
@@ -48,7 +59,9 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // Tu código:
   delete objeto [unaPropiedad]
     return objeto
-}
+
+    // si pidiera con dot notation seria: delet objeto.unaPropiedad; return objeto
+} 
 
 function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
@@ -103,7 +116,7 @@ return usuario["password"] === password;
 
 }
 
-// if (usuario.password === password) return true;
+// if (usuario.password === password) {return true; } else { return false;}
 
 function actualizarPassword (usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
@@ -112,6 +125,9 @@ function actualizarPassword (usuario, nuevaPassword) {
 
   usuario.password = nuevaPassword;
   return usuario;
+
+  // en este caso ya sabriamos q en el usuario hay una propiedad q se llama password
+  // tb asi: usuario["password"]=nuevaPassword;
 }
 
 function agregarAmigo (usuario, nuevoAmigo) {
@@ -121,6 +137,9 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Tu código:
 usuario.amigos.push(nuevoAmigo);
   return usuario;
+
+  // aca usamos .push xq es un array al q hay q agregarle nuevoAmigo (o sea no a la propiedad sino al argumento de la propiedad), sino no usariamos el .push
+  
 }
 
 function pasarUsuarioAPremium (usuarios) {
@@ -133,6 +152,9 @@ function pasarUsuarioAPremium (usuarios) {
      usuarios[i].esPremium = true;
   } 
   return usuarios;
+
+  // imaginemos que usuario= [{esPremium:false},{},{}] por eso usamos el bucle for. dentro de cada indice {} vamos a buscar una propiedad que es esPremium
+  // seteado es que ya tiene un valor, o seqa que ya podria estar existiendo
 }
 
 function sumarLikesDeUsuario (usuario) {
@@ -143,11 +165,17 @@ function sumarLikesDeUsuario (usuario) {
   // Devuelve la suma
   // Tu código:
 
-  let likesNum= 0;
+  let sumarLikes= 0;
   for (let i = 0; i < usuario.posts.length; i++) {
-likesNum = likesNum + usuario.posts[i].likes;    
+sumarLikes = sumarLikes + usuario.posts[i].likes;    
   }
-  return likesNum
+  return sumarLikes
+  
+  // seria: usuario={
+    //name: Lautaro
+    //EsPremium: true
+    //posts= [{likes:10}, {likes:3}, {likes:5}] estos son varios post o sea posts es un array que tiene varios objetitos post, y cada objetito post tiene una propiedad llamada likes.
+  //} estos likes vamos a sumar
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -165,11 +193,12 @@ function agregarMetodoCalculoDescuento (producto) {
   }
   return producto
 
- // producto["calcularPrecioDescuento"] = function () {
-  //  return this.precio - this.porcentajeDeDescuento * this.precio 
+ // producto.calcularPrecioDescuento = function () {
+  //  return this.precio - (this.porcentajeDeDescuento * this.precio) 
   //}
   //return producto
-// en este casdso el this hace referencia al producto
+// en este caso el this hace referencia al producto q tiene una propiedad q se llama precio
+// hay 2 return, porque un return se refiere a la funcion q estamos creando, y el otro al return q nos pide
 }
 
 // No modificar nada debajo de esta línea
